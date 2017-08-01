@@ -1,51 +1,27 @@
 const path = require('path');
 
+console.log(path.resolve(__dirname, ".."))
+
 module.exports = {
-  // entry: "./src/index",
-  // output: {
-  //   path: path.resolve(__dirname, "dist"), // string
-  //   filename: "app.[hash:8].js", // string
-  //   publicPath: "./assets/", // string
-  //   library: "MyLibrary", // string,
-  //   libraryTarget: "umd", // universal module definition
-  // },
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.jsx?$/,
-  //       include: [
-  //         path.resolve(__dirname, "app")
-  //       ],
-  //       exclude: [
-  //         path.resolve(__dirname, "app/demo-files")
-  //       ],
-  //       issuer: { test, include, exclude },
-  //       enforce: "pre",
-  //       enforce: "post",
-  //       loader: "babel-loader",
-  //       options: {
-  //         presets: ["es2015"]
-  //       },
-  //     },
-  //     {
-  //       test: /\.html$/,
-  //       use: [
-  //         "htmllint-loader",
-  //         {
-  //           loader: "html-loader",
-  //           options: {
-  //           }
-  //         }
-  //       ]
-  //     },
-  //     { oneOf: [ /* rules */ ] },
-  //     { rules: [ /* rules */ ] },
-  //     { resource: { and: [ /* conditions */ ] } },
-  //     { resource: { or: [  conditions  ] } },
-  //     { resource: [ /* conditions */ ] },
-  //     { resource: { not: /* condition */ } }
-  //   ],
-  // },
+  context:path.resolve(__dirname, ".."),
+  entry: path.resolve(__dirname, "../src/app/index"),
+  output: {
+    path: path.resolve(__dirname, "dist"), // string
+    filename: "app.[hash:8].js", // string
+    publicPath: "./assets/", // string
+    library: "MyLibrary",
+    libraryTarget: "umd",
+  },
+  module: {
+    rules: [
+      { 
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: "babel-loader", 
+        options: {presets: ['env']} 
+      }
+    ],
+  },
   // resolve: {
   //   modules: [
   //     "node_modules",

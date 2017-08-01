@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "scripts": {
     "build": "webpack -c ./build/webpack.config.js",
-    "api":"node ./api/index.js",
-    "dev": "node server.js && node ./api/index.js"
+    "api-server": "node ./api/index.js",
+    "web-server": "node server.js",
+    "dev": "npm run api-server && npm run web-server"
   },
   "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
     "express": "^4.15.3",
     "webpack-dev-middleware": "^1.12.0"
   }
