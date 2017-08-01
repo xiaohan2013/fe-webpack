@@ -1,0 +1,13 @@
+{
+  "name": "fe-webpack",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "webpack -c ./build/webpack.config.js",
+    "api":"node ./api/index.js",
+    "dev": "node server.js && node ./api/index.js"
+  },
+  "devDependencies": {
+    "express": "^4.15.3",
+    "webpack-dev-middleware": "^1.12.0"
+  }
+}
