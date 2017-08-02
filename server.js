@@ -19,6 +19,11 @@ var devServer = webpackDevMiddleware(compiler, {
     hot: true,
     https: false,
     noInfo: true,
+    stdin:true,
+    watchContentBase:true,
+    watchOptions: {
+      poll: true
+    }
 })
 
 app.use(devServer);
