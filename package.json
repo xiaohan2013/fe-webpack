@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "build": "webpack --config ./build/webpack.config.js",
-    "api-server": "node ./api/index.js",
-    "web-server": "node server.js",
-    "dev": "npm run api-server && npm run web-server"
+    "api-server": "node ./api/index.js &",
+    "web-server": "node server.js &",
+    "start": "npm run api-server && npm run web-server"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

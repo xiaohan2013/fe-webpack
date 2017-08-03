@@ -45,7 +45,9 @@ module.exports = {
         filename: '../../dist/index.html',
         template: 'src/index.html'
     }),
-    new webpack.HotModuleReplacementPlugin()
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
   performance: {
     hints: 'warning'
