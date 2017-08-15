@@ -21,6 +21,7 @@ module.exports = {
     ],
   },
   // 无需使用loader对这些文件进行编译或者其他操作，可以在无loader下进行打包
+  // 无需经过loader的编译
   // resolve: {
   //   modules: [
   //     "node_modules",
@@ -36,6 +37,7 @@ module.exports = {
   devtool: "cheap-module-source-map",
   // context: __dirname,
   // target: "web",
+  // 这是从外部加载过来的，一般是scripts标签中加载进来的
   externals: {
     jquery: 'jQuery'
   },
