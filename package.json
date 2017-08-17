@@ -5,7 +5,8 @@
     "build": "webpack --config ./build/webpack.config.js",
     "api-server": "node ./api/index.js &",
     "web-server": "node server.js &",
-    "start": "concurrently \"npm run api-server\"  \"npm run web-server\""
+    "start": "concurrently \"npm run api-server\"  \"npm run web-server\"",
+    "build-dev": "webpack --config ./build/webpack.config.dev --env dev"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
