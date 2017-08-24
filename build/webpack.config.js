@@ -34,6 +34,7 @@ module.exports = {
   //   //   "module": path.resolve(__dirname, "app/third/module.js"),
   //   // },
   // },
+  // alias的路径必须是绝对路径
   devtool: "cheap-module-source-map",
   // context: __dirname,
   // target: "web",
