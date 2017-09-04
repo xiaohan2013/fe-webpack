@@ -6,7 +6,8 @@
     "api-server": "node ./api/index.js &",
     "web-server": "node server.js &",
     "start": "concurrently \"npm run api-server\"  \"npm run web-server\"",
-    "start-webpack-dev-server": "webpack-dev-server --config ./devserver-webpack/webpack.config"
+    "start-webpack-dev-server": "webpack-dev-server --config ./devserver-webpack/webpack.config",
+    "build-dev": "webpack --config ./build/webpack.config.dev --env dev"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
