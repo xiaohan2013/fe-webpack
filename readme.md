@@ -9,4 +9,5 @@ webpack实验项目
 * 指定libaray的名称
 * 指定target的方式，就是模块的标准方式
 
-
+## Nodejs 经常安装失败
+npm install --save node-sass --registry=https://registry.npm.taobao.org --disturl=https://npm.taobao.org/dist --sass-binary-site=http://npm.taobao.org/mirrors/node-sass
